@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { ScrollRestoration } from "react-router-dom";
-
+import axios from 'axios'
 const Register = () => {
   const [username, setusername] = useState("");
   const [email, setemail] = useState("");
