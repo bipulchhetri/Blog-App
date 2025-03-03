@@ -20,7 +20,8 @@ const Navbar = () => {
         <Link to="/contact" className="hover:text-blue-600">Contact</Link>
         <Link to='/login' onClick={()=>setOpen(false)} >Login</Link>
         <Link to='/register' onClick={()=>setOpen(false)} >Register</Link>
-      
+        {/* <Link to='/dashboard' onClick={()=>setOpen(false)} >Dashboard</Link> */}
+
 
 
       </div>
@@ -44,6 +45,8 @@ const Navbar = () => {
         <Link to="/contact" onClick={() => setOpen(false)}>Contact</Link>
         <Link to='/login' onClick={()=>setOpen(false)} >Login</Link>
         <Link to='/register' onClick={()=>setOpen(false)} >Register</Link>
+        {/* <Link to='/dashboard' onClick={()=>setOpen(false)} >Register</Link> */}
+
 
       </div>
     </nav>

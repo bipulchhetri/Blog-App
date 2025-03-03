@@ -7,6 +7,7 @@ import Home from "./components/Home";
 import Contact from "./components/Contact";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
+import Dashboard from "./components/Dashboard";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/dashboard" element={<Dashboard />} />
 
 
       </Routes>
