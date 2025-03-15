@@ -12,7 +12,7 @@ const userId = {id};
     const[newComment,setNewComment]=useState("")
 
     useEffect(() =>{
-        axios.get(`http://localhost:3000/blog/${id}`)
+        axios.get(`https://blog-app-x66b.onrender.com/blog/${id}`)
         .then((res) =>{
             setBlog(res.data)
             setLikes(res.data.likes || 0)
@@ -27,7 +27,7 @@ const userId = {id};
         if (liked) return; // Prevent multiple likes
     
         try {
-            const response = await axios.post(`http://localhost:3000/blogs/${id}/like`, { userId });
+            const response = await axios.post(`https://blog-app-x66b.onrender.com/${id}/like`, { userId });
     
             setLikes(response.data.totalLikes);
             setLiked(true); // User can only like once
@@ -40,7 +40,7 @@ const userId = {id};
     const handleC=async() =>{
       if(!newComment.trim()) return;
       try{
-        await axios.post(`http://localhost:3000/blogs/${id}/comment`,{text:newComment })
+        await axios.post(`https://blog-app-x66b.onrender.com/${id}/comment`,{text:newComment })
         setComments([...comments,{text:newComment}]);
             setNewComment("")
 

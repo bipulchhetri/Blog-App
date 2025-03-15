@@ -139,7 +139,7 @@ const BlogCard = () => {
      }
 
     useEffect(() =>{
-        axios.get("http://localhost:3000/blogs").then((res) => setBlogs(res.data))
+        axios.get("https://blog-app-x66b.onrender.com/blogs").then((res) => setBlogs(res.data))
     },[])
 
   return (
@@ -150,7 +150,7 @@ const BlogCard = () => {
         <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
             {currentBlogs.map((blog) =>(
                 <div key={blog._id} className='bg-white p-3 border border-black-500 '>
-                    <img src={`http://localhost:3000${blog.image}`} className='w-full h-32 object-cover'></img>
+                    <img src={`https://blog-app-x66b.onrender.com/{blog.image}`} className='w-full h-32 object-cover'></img>
                     <h3 className='font-bold text-gray-700 mt-12'>{blog.title}</h3>
                    <p className='text-gray-600 text-sm'><span className='text-red-500 font-medium'>{blog.author}</span> | {new Date(blog.createdAt).toLocaleString()}</p>
                   <p className='text-gray-700 text-sm mt-2'>{blog.content.substring(0,80)}...</p>
