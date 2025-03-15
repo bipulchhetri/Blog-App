@@ -5,11 +5,11 @@ const BlogDetail = () => {
     const{id}=useParams()
     const[blog,setBlog]=useState(null)
     // const[likes,setLikes]=useState(0)
-    const [liked, setLiked] = useState(false);
-const [likes, setLikes] = useState(0); 
-const userId = {id}; 
-    const[comments,setComments]=useState([])
-    const[newComment,setNewComment]=useState("")
+//     const [liked, setLiked] = useState(false);
+// const [likes, setLikes] = useState(0); 
+// const userId = {id}; 
+    // const[comments,setComments]=useState([])
+    // const[newComment,setNewComment]=useState("")
 
     useEffect(() =>{
         axios.get(`https://blog-app-x66b.onrender.com/blog/${id}`)
@@ -60,14 +60,14 @@ const userId = {id};
          dangerouslySetInnerHTML={{ __html:blog.content}}
         ></div>
 
-        <div className='flex items-center space-x-4 mt-6'>
+        {/* <div className='flex items-center space-x-4 mt-6'>
         <button onClick={handleLike} disabled={liked} className='bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-700'>
     {liked ? "Liked Done" : "Like "} ({likes})
 </button>
-            {/* <button onClick={handleLike}className='bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-700'>Like ({likes})</button> */}
-        </div>
+            <button onClick={handleLike}className='bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-700'>Like ({likes})</button>
+        </div> */}
 
-        <div className='mt-8'>
+        {/* <div className='mt-8'>
             <h2 className='text-2xl font-bold text-gray-800'>Comments</h2>
             <input 
              type="text"
@@ -87,7 +87,7 @@ const userId = {id};
                     <p className='text-gray-600'>No Comments Yet.</p>
                 )}
             </div>
-        </div>
+        </div> */}
        </div>
     </div>
   )
