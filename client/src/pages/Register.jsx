@@ -20,7 +20,7 @@ const Register = () => {
   }
 
   return (
-    <div className='min-h-screen flex justify-center items-center bg-red-100'>
+    <div className='min-h-screen flex justify-center items-center bg-orange-100'>
       <form className='bg-white p-6' onSubmit={handleRegister}>
         <h2 className='text-red-500 text-2xl font-bold mb-4'>Register</h2>
         <input placeholder="Enter Name"className='border p-2 w-full mb-2' type="text" onChange={(e) => setUsername(e.target.value)}></input>

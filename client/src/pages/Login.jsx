@@ -21,12 +21,12 @@ const Login = () => {
   }
 
   return (
-    <div className='min-h-screen flex justify-center items-center bg-red-100'>
+    <div className='min-h-screen flex justify-center items-center bg-orange-100'>
       <form className='bg-white p-6' onSubmit={handleLogin}>
         <h2 className='text-red-500 text-2xl font-bold mb-4'>Login</h2>
         <input type="email" placeholder="Enter Email"className='border p-2 w-full mb-2 'onChange={(e) => setEmail(e.target.value)} ></input>
         <input type="password"placeholder="Enter Password"className='border p-2 w-full mb-2' onChange={(e) => setPassword(e.target.value)}></input>
-       <button type="submit" className='bg-red-500 text-white p-2 w-full '>Login</button>
+       <button type="submit" className='bg-orange-500 text-white p-2 w-full '>Login</button>
       </form>
     </div>
   )
