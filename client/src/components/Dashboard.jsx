@@ -132,7 +132,7 @@ const Dashboard = () => {
 
 
     useEffect(() =>{
-        axios.get(`http://localhost:3000/blogs/${username}`).then((res) => setBlogs(res.data));
+        axios.get(`https://blog-app-x66b.onrender.com/blogs/${username}`).then((res) => setBlogs(res.data));
 
     },[username])
 
@@ -148,27 +148,26 @@ const Dashboard = () => {
     formData.append("content",stripHtml(content))
     formData.append("image",image)
     formData.append("author",username)
-    await axios.post("http://localhost:3000/upload",formData)
+    await axios.post("https://blog-app-x66b.onrender.com/upload",formData)
     window.location.reload();
-    
-    
-    
-
     }
+  
+
+    
     const handleUpdate=async() =>{
       const formData= new FormData()
       formData.append("title",title)
       formData.append("content",content)
       if(image) formData.append("image",image);
 
-      await axios.put(`http://localhost:3000/blogs/${editingBlog._id}`,formData)
+      await axios.put(`https://blog-app-x66b.onrender.com/blogs/${editingBlog._id}`,formData)
       setBlogs(blogs.map((blog) =>(blog._id === editingBlog._id ? {...blog,title,content} : blog)))
       setEditingBlog(null)
       setImage(null)
     }
 
     const handleDelete=async(id)=>{
-     await axios.delete(`http://localhost:3000/blogs/${id}`)
+     await axios.delete(`https://blog-app-x66b.onrender.com/blogs/${id}`)
      setBlogs(blogs.filter((blog) => blog._id !== id))
     }
     
@@ -214,7 +213,7 @@ const Dashboard = () => {
                 ): (
                     <>
                       <div className='flex items-center space-x-4'>
-                        <img src={`http://localhost:3000${blog.image}`}
+                        <img src={`https://blog-app-x66b.onrender.com${blog.image}`}
                         className='w-12 h-12 object-cover rounded-full'
                         ></img>
                       
