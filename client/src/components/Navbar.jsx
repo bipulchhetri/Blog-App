@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Register from "../pages/Register";
+// import Register from "../pages/Register";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -8,8 +8,8 @@ const Navbar = () => {
   return (
     <nav className="w-full h-16 md:h-20 bg-white shadow-md flex items-center justify-between px-6">
       {/* Logo */}
-      <div className="text-2xl font-bold">
-        <Link to="/">MyLogo</Link>
+      <div className="text-2xl font-bold uppercase">
+        <Link to="/">Englis<span className="bg-orange-400 p-2">ify</span></Link>
       </div>
 
       {/* Desktop Menu */}

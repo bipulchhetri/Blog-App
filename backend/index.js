@@ -183,13 +183,38 @@ const multer= require("multer")
 const app=express()
 app.use(express.json())
 app.use(cors())
-
+require("dotenv").config();
 app.use("/uploads",express.static("uploads"))
 
-mongoose.connect("mongodb+srv://bipul:12345@englishblog.gwipu.mongodb.net/", {
-    useNewUrlParser:true,
-    useUnifiedTopology:true
-})
+const PORT = process.env.PORT || 3000;
+const MONGO_URI = process.env.MONGO_URI;
+
+// Connect to MongoDB
+const connectDB = async () => {
+    try {
+        await mongoose.connect(MONGO_URI, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+            
+        });
+        console.log("✅ MongoDB Connected Successfully");
+    } catch (error) {
+        console.error("❌ MongoDB Connection Error:", error);
+        process.exit(1); // Exit process if connection fails
+    }
+};
+
+// Start Server
+app.listen(PORT, async () => {
+    await connectDB();
+    console.log(`🚀 Server running on http://localhost:${PORT}`);
+});
+
+// app.listen(3000,() => console.log("Server Start"))
+// mongoose.connect("mongodb+srv://bipul:12345@englishblog.gwipu.mongodb.net/", {
+//     useNewUrlParser:true,
+//     useUnifiedTopology:true
+// })
 
 const uploadDir=path.join(__dirname,"uploads")
 if(!fs.existsSync(uploadDir)){
@@ -342,4 +367,3 @@ app.get("/all-blogs",async(req,res) =>{
         res.status(500).json({message:"Internal Server Error"})
     }
 })
-app.listen(3000,() => console.log("Server Start"))

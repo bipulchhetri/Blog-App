@@ -8,6 +8,8 @@ import Contact from "./components/Contact";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Dashboard from "./components/Dashboard";
+import BlogDetail from "./components/BlogDetail";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -22,10 +24,12 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="//blog/:id" element={<BlogDetail />} />
 
 
       </Routes>
     </Router>
+    <Footer/>
     </>
   );
 }
