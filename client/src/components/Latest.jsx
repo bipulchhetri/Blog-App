@@ -18,7 +18,7 @@ const Latest = () => {
     },[])
   return (
     <div  >
-      <section className='py-16 px-6 bg-orange-100 text-black'>
+      <section className='py-16 px-6 dark:bg-gray-300 text-black'>
         <div className='max-w-6xl mx-auto'>
             <h2 className='text-3xl font-bold text-center mb-8'>Latest Blogs</h2>
             <div className='grid md:grid-cols-3 gap-8'>

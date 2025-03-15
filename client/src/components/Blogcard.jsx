@@ -166,7 +166,7 @@ const BlogCard = () => {
         </div>
       </div>
 
-      <div className='w-full md:w-1/4 bg-orange-100 p-4 rounded-lg shadow-lg'>
+      <div className='w-full md:w-1/4 dark:bg-gray-300 p-4 rounded-lg shadow-lg'>
         <h2 className='text-lg font-bold text-orange-600'>Search Blogs</h2>
         <input placeholder="Search by title..."
          value={search}
