@@ -166,14 +166,14 @@ const BlogCard = () => {
         </div>
       </div>
 
-      <div className='w-full md:w-1/4 bg-gray-200 p-4 rounded-lg shadow-lg'>
+      <div className='w-full md:w-1/4 bg-orange-100 p-4 rounded-lg shadow-lg'>
         <h2 className='text-lg font-bold text-orange-600'>Search Blogs</h2>
         <input placeholder="Search by title..."
          value={search}
          onChange={(e) => setSearch(e.target.value)}
          className='w-full p-2 mt-2 border rounded'
         ></input>
-
+ 
         <div>
             <h2 className='text-orange-600  font-bold'>Trending Blogs</h2>
             {blogs.slice(0,10).map((blog) =>(
