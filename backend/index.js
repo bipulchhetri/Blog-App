@@ -329,7 +329,7 @@ app.get("/blog/:id",async(req,res) =>{
             return res.status(404).json({message:"Blog not found"})
         }
 
-        blog.image=`http://localhost:3000${blog.image}`;
+        blog.image=`https://blog-app-x66b.onrender.com${blog.image}`;
         res.json(blog)
     }catch(error){
         res.status(500).json({message:"Internal Server Error"})

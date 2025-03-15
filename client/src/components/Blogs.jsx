@@ -10,7 +10,7 @@ const Blogs = () => {
    useEffect(() =>{
     const fetchBlogs= async() =>{
         try{
-            const response= await fetch("http://localhost:3000/all-blogs");
+            const response= await fetch("https://blog-app-x66b.onrender.com/all-blogs");
             const data= await response.json()
             setBlogs(data)
         }
@@ -39,7 +39,7 @@ const Blogs = () => {
            {currentBlogs.length > 0 ? (
             currentBlogs.map((blog) =>(
                 <div key={blog._id} className='bg-gray-200 p-4 '>
-                    <img src={`http://localhost:3000${blog.image}`} className='w-full h-32 object-cover'></img>
+                    <img src={`https://blog-app-x66b.onrender.com${blog.image}`} className='w-full h-32 object-cover'></img>
                  <h3>{blog.title}</h3>
                <p>{blog.content.substring(0,50)}...</p>
                <Link to={`/blog/${blog._id}`} className=' mt-4 inline-block bg-orange-600 text-white px-4 py-2'>Red More</Link>
