@@ -11,7 +11,7 @@ const Login = () => {
   const handleLogin= async(e)=>{
     e.preventDefault()
     try{
-     const res= await axios.post("http://localhost:3000/login",{email,password})
+     const res= await axios.post("https://blog-app-x66b.onrender.com/login",{email,password})
       localStorage.setItem('token',res.data.token)
       localStorage.setItem("username",res.data.username)
       navigate('/dashboard')
