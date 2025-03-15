@@ -23,31 +23,31 @@ const userId = {id};
 
 
 
-    const handleLike = async () => {
-        if (liked) return; // Prevent multiple likes
+    // const handleLike = async () => {
+    //     if (liked) return; // Prevent multiple likes
     
-        try {
-            const response = await axios.post(`https://blog-app-x66b.onrender.com/${id}/like`, { userId });
+    //     try {
+    //         const response = await axios.post(`https://blog-app-x66b.onrender.com/${id}/like`, { userId });
     
-            setLikes(response.data.totalLikes);
-            setLiked(true); // User can only like once
-        } catch (error) {
-            console.error("Error liking blog:", error.response?.data?.message || error.message);
-        }
-    };
+    //         setLikes(response.data.totalLikes);
+    //         setLiked(true); // User can only like once
+    //     } catch (error) {
+    //         console.error("Error liking blog:", error.response?.data?.message || error.message);
+    //     }
+    // };
    
     
-    const handleC=async() =>{
-      if(!newComment.trim()) return;
-      try{
-        await axios.post(`https://blog-app-x66b.onrender.com/${id}/comment`,{text:newComment })
-        setComments([...comments,{text:newComment}]);
-            setNewComment("")
+    // const handleC=async() =>{
+    //   if(!newComment.trim()) return;
+    //   try{
+    //     await axios.post(`https://blog-app-x66b.onrender.com/${id}/comment`,{text:newComment })
+    //     setComments([...comments,{text:newComment}]);
+    //         setNewComment("")
 
-      }catch(error){
-        console.error("Error commenting on blog:", error)
-      }
-    }
+    //   }catch(error){
+    //     console.error("Error commenting on blog:", error)
+    //   }
+    // }
     if (!blog) return <p>Loading...</p>
   return (
     <div className='p-6 bg-gray-100 min-h-screen flex justify-center items-center'>
