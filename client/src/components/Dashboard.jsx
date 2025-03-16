@@ -130,7 +130,7 @@ const Dashboard = () => {
     const[blogs,setBlogs]=useState([])
     const[editingBlog,setEditingBlog]=useState(null)
    
-   
+   console.log('h')
 
     useEffect(() =>{
         axios.get(`https://blog-app-x66b.onrender.com/blogs/${username}`).then((res) => setBlogs(res.data));
