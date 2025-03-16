@@ -7,7 +7,7 @@ const Latest = () => {
     useEffect(() =>{
         const fetchLB=async()=>{
             try{
-                const response= await fetch("http://localhost:3000/latest-blog")
+                const response= await fetch("https://blog-app-1-4i8q.onrender.com/latest-blog")
                 const data=await response.json()
                 setTb(data)
             }catch(error){
@@ -25,7 +25,7 @@ const Latest = () => {
                 {tb.length > 0 ? (
                     tb.map((blog) =>(
                         <div key={blog._id} className='p-4 border-2 border-black-600'>
-                        <img className='w-full h-32 object-cover'src={`http://localhost:3000${blog.image}`}></img>
+                        <img className='w-full h-32 object-cover'src={`https://blog-app-1-4i8q.onrender.com${blog.image}`}></img>
                         <h3 className='text-xl font-bold'>{blog.title}</h3>
                         {/* <p className='text-gray-700 text-sm mt-2'>{blog.content.substring(0,80)}...</p> */}
                  

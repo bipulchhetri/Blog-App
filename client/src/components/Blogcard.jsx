@@ -33,7 +33,7 @@ const BlogCard = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/blogs")
+      .get("https://blog-app-1-4i8q.onrender.com/blogs")
       .then((res) => setBlogs(res.data))
       .catch((err) => console.error("Error fetching blogs:", err));
   }, []);
@@ -50,7 +50,7 @@ const BlogCard = () => {
           {currentBlogs.map((blog) => (
             <div key={blog._id} className="bg-white p-3 border border-gray-500">
               <img
-                src={`http://localhost:3000/${blog.image}`}
+                src={`https://blog-app-1-4i8q.onrender.com/${blog.image}`}
                 className="w-full h-32 object-cover rounded-md"
                 alt={blog.title}
               />

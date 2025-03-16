@@ -9,7 +9,7 @@ const BlogDetail = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/blog/${id}`)
+      .get(`https://blog-app-1-4i8q.onrender.com/blog/${id}`)
       .then((res) => setBlog(res.data))
       .catch((err) => console.error("Error fetching blog:", err));
   }, [id]);
@@ -32,7 +32,7 @@ const BlogDetail = () => {
       <div className="max-w-3xl w-full bg-white p-8 rounded-lg shadow-md">
         {/* ✅ Image rendering fix */}
         <img
-          src={`http://localhost:3000/${blog.image}`}
+          src={`https://blog-app-1-4i8q.onrender.com/${blog.image}`}
           className="w-full h-80 object-cover rounded-lg"
           alt="Blog"
         />

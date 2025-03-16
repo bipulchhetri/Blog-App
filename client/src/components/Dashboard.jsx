@@ -22,7 +22,7 @@ const Dashboard = () => {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    axios.get(`http://localhost:3000/blogs/${username}`).then((res) => setBlogs(res.data));
+    axios.get(`https://blog-app-1-4i8q.onrender.com/blogs/${username}`).then((res) => setBlogs(res.data));
   }, [username]);
 
   const handleUpload = async (e) => {
@@ -45,7 +45,7 @@ const Dashboard = () => {
     if (image) formData.append("image", image);
     formData.append("author", username);
 
-    await axios.post("http://localhost:3000/upload", formData);
+    await axios.post("https://blog-app-1-4i8q.onrender.com/upload", formData);
     window.location.reload();
   };
 
@@ -65,7 +65,7 @@ const Dashboard = () => {
     formData.append("content", editContent);
     if (editImage) formData.append("image", editImage);
 
-    await axios.put(`http://localhost:3000/blogs/${editingBlog._id}`, formData);
+    await axios.put(`https://blog-app-1-4i8q.onrender.com/blogs/${editingBlog._id}`, formData);
     setBlogs(
       blogs.map((blog) =>
         blog._id === editingBlog._id ? { ...blog, title: editTitle, content: editContent } : blog
@@ -78,7 +78,7 @@ const Dashboard = () => {
   };
 
   const handleDelete = async (id) => {
-    await axios.delete(`http://localhost:3000/blogs/${id}`);
+    await axios.delete(`https://blog-app-1-4i8q.onrender.com/blogs/${id}`);
     setBlogs(blogs.filter((blog) => blog._id !== id));
   };
 
@@ -132,7 +132,7 @@ const Dashboard = () => {
               <>
                 <div className="flex items-center space-x-4">
                   <img
-                    src={`http://localhost:3000${blog.image}`}
+                    src={`https://blog-app-1-4i8q.onrender.com${blog.image}`}
                     className="w-12 h-12 object-cover rounded-full"
                     alt="Blog"
                   />
