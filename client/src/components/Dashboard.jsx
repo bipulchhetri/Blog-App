@@ -129,7 +129,8 @@ const Dashboard = () => {
     const[image,setImage]=useState(null)
     const[blogs,setBlogs]=useState([])
     const[editingBlog,setEditingBlog]=useState(null)
-
+   
+   
 
     useEffect(() =>{
         axios.get(`https://blog-app-x66b.onrender.com/blogs/${username}`).then((res) => setBlogs(res.data));
@@ -190,7 +191,7 @@ const Dashboard = () => {
           type="file" placeholder="Blog Title"
          className='mb-2'
         ></input>
-        <ReactQuill value={content} onChange={setContent} className='mb-2'></ReactQuill>
+        <ReactQuill value={content} onChange={setContent} className='mb-2' id='editor'></ReactQuill>
         <button type="submit"className='bg-blue-500 text-white  p-2'>Publish</button>
      </form>
 
