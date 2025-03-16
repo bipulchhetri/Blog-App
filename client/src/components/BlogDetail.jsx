@@ -59,7 +59,7 @@ const BlogDetail = () => {
         className='mt-4 text-gray-700 leading-relaxed'
          dangerouslySetInnerHTML={{ __html:blog.content}}
         ></div>
-
+<console className="log"></console>
         {/* <div className='flex items-center space-x-4 mt-6'>
         <button onClick={handleLike} disabled={liked} className='bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-700'>
     {liked ? "Liked Done" : "Like "} ({likes})
