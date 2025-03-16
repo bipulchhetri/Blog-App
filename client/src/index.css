@@ -1,1 +1,33 @@
 @import "tailwindcss";
+
+
+.ql-editor h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2c3e50;
+  }
+  
+  .ql-editor h2 {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #34495e;
+  }
+  
+  .ql-editor h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4a4a4a;
+  }
+  
+  /* Style for paragraphs */
+  .ql-editor p {
+    font-size: 1rem;
+    line-height: 10%;
+    color: #333;
+  }
+  
+  /* Add spacing between paragraphs */
+  .ql-editor p:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+  

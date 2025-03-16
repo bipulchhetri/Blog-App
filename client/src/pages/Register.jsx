@@ -11,7 +11,7 @@ const Register = () => {
   const handleRegister= async(e)=>{
     e.preventDefault()
     try{
-      await axios.post("https://blog-app-x66b.onrender.com/register",{username,email,password})
+      await axios.post("http://localhost:3000/register",{username,email,password})
       alert("Register Success")
       navigate('/login')
     }catch(err){
