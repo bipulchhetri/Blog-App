@@ -210,6 +210,9 @@ app.listen(PORT, async () => {
     console.log(`🚀 Server running on http://localhost:${PORT}`);
 });
 
+app.get("/", (req, res) => {
+    res.send("🚀 Welcome to My Express Server!");
+});
 // app.listen(3000,() => console.log("Server Start"))
 // mongoose.connect("mongodb+srv://bipul:12345@englishblog.gwipu.mongodb.net/", {
 //     useNewUrlParser:true,
