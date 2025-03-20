@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import DOMPurify from "dompurify";
+import Latest from "./Latest";
 
 const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
@@ -34,6 +35,7 @@ const Blogs = () => {
   };
 
   return (
+   
     <div className="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row gap-8">
       {/* ✅ Left Side - Blog List */}
       <div className="w-full md:w-3/4">
@@ -44,10 +46,11 @@ const Blogs = () => {
             currentBlogs.map((blog) => (
               <div key={blog._id} className="bg-gray-200 p-4 rounded-lg shadow-lg">
                 <img
-                  src={`https://blog-app-1-4i8q.onrender.com/${blog.image}`}
+                  src={`https://blog-app-1-4i8q.onrender.com${blog.image}`}
                   alt="Blog"
                   className="w-full h-32 object-cover rounded-md"
                 />
+
                 <h3 className="font-semibold mt-2">{blog.title}</h3>
                 <p className="text-gray-700 text-sm">
                   {DOMPurify.sanitize(blog.content).slice(0, 50)}...
