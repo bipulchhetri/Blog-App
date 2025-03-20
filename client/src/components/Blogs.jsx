@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import DOMPurify from "dompurify";
-import Latest from "./Latest";
 
 const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
@@ -12,7 +11,7 @@ const Blogs = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await fetch("https://blog-app-1-4i8q.onrender.com/all-blogs");
+        const response = await fetch("https://blog-app-ro4q.vercel.app/all-blogs");
         const data = await response.json();
         setBlogs(data);
       } catch (error) {
@@ -46,7 +45,7 @@ const Blogs = () => {
             currentBlogs.map((blog) => (
               <div key={blog._id} className="bg-gray-200 p-4 rounded-lg shadow-lg">
                 <img
-                  src={`https://blog-app-1-4i8q.onrender.com${blog.image}`}
+                  src={`https://blog-app-ro4q.vercel.app/${blog.image}`}
                   alt="Blog"
                   className="w-full h-32 object-cover rounded-md"
                 />

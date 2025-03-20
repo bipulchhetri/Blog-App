@@ -25,7 +25,7 @@ const Latest = () => {
                 {tb.length > 0 ? (
                     tb.map((blog) =>(
                         <div key={blog._id} className='p-4 border-2 border-black-600'>
-                        <img className='w-full h-32 object-cover'src={`https://blog-app-1-4i8q.onrender.com${blog.image}`}></img>
+                        <img className='w-full h-32 object-cover'src={`https://blog-app-ro4q.vercel.app/${blog.image}`}></img>
                         <h3 className='text-xl font-bold'>{blog.title}</h3>
                         {/* <p className='text-gray-700 text-sm mt-2'>{blog.content.substring(0,80)}...</p> */}
                  
