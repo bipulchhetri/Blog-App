@@ -51,7 +51,7 @@ const Blogs = () => {
 
                {/* <p>{blog.content.substring(0,50)}...</p> */}
                
-               <Link to={`/blog/${blog._id}`} className=' mt-4 inline-block bg-red-600 text-white px-4 py-2'>Red More</Link>
+               <Link to={`/blog/${blog._id}`} className=' mt-4 inline-block bg-orange-500 text-white px-4 py-2'>Red More</Link>
                 </div>
             ))
            ):(
@@ -64,7 +64,7 @@ const Blogs = () => {
             <div className='mt-8 flex justify-center space-x-4'>
                 {Array.from({length:totalPages},(_,i)=>(
                     <button
-                     className={`px-4 py-2 rounded-lg font-bold ${currentPage === i + 1 ? "bg-red-600 text-white" : "bg-gray-200 text-black"}`}
+                     className={`px-4 py-2 rounded-lg font-bold ${currentPage === i + 1 ? "bg-orange-100 text-white" : "bg-gray-200 text-black"}`}
                      onClick={() => setCurrentPage(i + 1)}
                     >{i + 1}</button>
                 ))}
